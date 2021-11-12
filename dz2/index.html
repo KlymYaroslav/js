@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    let time = +prompt('Напишіть число від 0 до 59');
+    if (time <= 15){
+    console.log('зараз перша чверть');}
+    else if (time >= 15 && time <= 30){
+    console.log('зараз друга чверть');}
+    else if (time >= 30 && time <= 45){
+    console.log('зараз третя чверть');}
+    else if (time >= 45 && time <= 59){
+    console.log('зараз четверта чверть');}
+
+
+    let day = +prompt('Напишіть число від 1 до 31');
+    if (day <= 10){
+        console.log('зараз перша декада');}
+    else if (day >= 11 && day <= 20){
+        console.log('зараз друга декада');}
+    else if (day >= 21 && day <= 31){
+        console.log('зараз третя декада');}
+
+
+    let test = 'ght';
+    if (test === true){
+        console.log('виведіть Вірно');}
+    else if (test ===false){
+        console.log('виведіть Не вірно');}
+
+
+
+    let a = +prompt('введіть число');
+    if (a !== 0){
+        console.log('Вірно');}
+    else  {
+         console.log('НЕВІРНО');
+    }
+
+
+    let rozklad = +prompt('введіть порядкове число дня тижня');
+    switch (rozklad) {
+        case 1:
+            console.log('Йти в універ');
+            break;
+        case 2:
+            console.log('Йти в універ');
+            break;
+        case 3:
+            console.log('Йти в універ');
+            break;
+        case 4:
+            console.log('Йти в універ');
+            break;
+        case 5:
+            console.log('Йти в універ');
+            break;
+        case 6:
+            console.log('Відпочивати');
+            break;
+        case 7:
+            console.log('Відпочивати');
+
+    }
+
+    let rik = prompt('Чи високосний рік?')
+    if(rik % 4 === 0){
+    console.log('Рік високосний');
+    }
+    else {
+    console.log('Рік не високосний');
+    }
+
+
+    let java = prompt('Яка «офіційна» назва JavaScript?')
+    if(java ==='ECMAScript'){
+        console.log('Правильно!');
+    }
+    else {
+        console.log('Не знаєте? ECMAScript!');
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
