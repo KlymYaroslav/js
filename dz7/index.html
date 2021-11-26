@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+
+
+  function User (id, name, surname , email, phone){
+   this.id = id;
+   this.name = name;
+   this.surname = surname;
+   this.email = email;
+   this.phone = phone;
+  }
+
+  // створити пустий масив, наповнити його 10 об'єктами new User(....)
+  let array = [
+      new User(7, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(8, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(9, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(1, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(2, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(3, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(7, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(8, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(7, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+      new User(7, '10', 'nick', 'nick@gmail.com', '+30680000001'),
+  ];
+  console.log(array)
+
+  // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+  let x = array.filter(value => value.id % 2 === 0 )
+  console.log(x)
+
+  // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+
+  array.sort((a, b) => a.id - b.id)
+  console.log(array)
+
+  // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+
+  class Client{
+      constructor(id, name, surname , email, phone, order) {
+          this.id = id;
+          this.name = name;
+          this.surname = surname;
+          this.email = email;
+          this.phone = phone;
+          this.order = order;
+      }
+  }
+
+  // створити пустий масив, наповнити його 10 об'єктами Client
+
+  let array2 = [
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smi"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smileee"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"s"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"sile"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smilegdh"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smile77"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"s27mile"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smile"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',"smile"),
+      new Client(10,"Yarinka","girl","yar@27gmail.com",'+30680000001',""),
+  ];
+  console.log(array2)
+
+  // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+  array2.sort((a, b) => a.order.length - b.order.length)
+  console.log(array2)
+</script>
+</body>
+</html>
