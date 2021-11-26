@@ -6,93 +6,6 @@
 </head>
 <body>
 <script>
-    // - Дано список імен.
-    // let n1 = 'Harry..Potter'
-    // let n2 = 'Ron---Whisley'
-    // let n3 = 'Hermione__Granger'
-    // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
-    // let n1 = 'Harry Potter'
-    // let n2 = 'Ron Whisley'
-    // let n3 = 'Hermione Granger'
-
-
-    // let n1 = 'Harry..........Potter'
-    // let n2 = 'Ron---Whisley'
-    // let n3 = 'Hermione__Granger'
-    //
-    // let fun = n1.replace(".."," ");
-    // console.log(fun);
-    //
-    // let fun2 = n2.replace("---"," ");
-    // console.log(fun2);
-    //
-    // let fun3 = n3.replace("__"," ");
-    // console.log(fun3);
-
-    // let fun = (text, sym) => {
-    //     let array = [];
-    //     if (text.includes(sym)) {
-    //         let a = text.split(sym)
-    //         a.forEach((item) => {
-    //             if (item) {
-    //                 array.push(item)
-    //             }
-    //         })
-    //         console.log(array.join(' '))
-    //     }
-    // }
-
-    // fun(n2, '-')
-
-
-    // //  - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
-    //
-    // let random = (length, num) => {
-    //     let emptyArray = [];
-    //     for (let i = 0; i < length; i++) {
-    //         emptyArray.push(Math.floor(Math.random() * num));
-    //     }
-    //      return emptyArray;
-    //  };
-    //  let result = random(10, 100);
-    //  console.log(result);
-
-    // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
-
-    // let sortRandom = (length, num) => {
-    //     let emptyArray = [];
-    //     for (let i = 1; i < length; i++) {
-    //         emptyArray.push(Math.floor(Math.random() * num));
-    //     }
-    //     return emptyArray.sort((a, b) => a - b);
-    // };
-    // console.log(sortRandom(10, 100));
-
-    // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
-    // відфільтрувати  його за допомоги filter, залишивши тільки парні числа
-
-
-    // let fun1 = (length, num) => {
-    //     let array = [];
-    //     for (let i = 0; i < length; i++) {
-    //         array.push(Math.floor(Math.random() * num))
-    //     }
-    //     return array.filter((item) => {
-    //         if (item % 2 === 1) return item
-    //     })
-    // }
-    // console.log(fun1(10, 100))
-
-
-
-
-
-
-
-
-
-
-
     // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 
     let n1 = 'Harry..Potter'
@@ -161,9 +74,62 @@
     // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції)
     // . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
 
+    let array4 = [];
+    for (let i = 0; i < 10; i++) {
+        array4.push(Math.floor(Math.random()*10))
+    }
+       let x = array4.map(value => value + '')
+    console.log(x)
+
+   // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки
+   // в залежності від значення аргументу direction.
 
 
+    let sortNums = (direction) => {
+        let array5 = [];
+        for (let i = 0; i < 10; i++) {
+            array5.push(Math.floor(Math.random()*10))
 
+        }
+            if (direction === "+"){
+                array5.sort((a, b) => a - b )
+            }
+            else if (direction === "-"){
+                array5.sort((a, b) => b - a )
+            }
+
+
+        return array5;
+    }
+    console.log(sortNums('-'))
+
+    // - є масив
+    // let coursesAndDurationArray = [
+    //     {title: 'JavaScript Complex', monthDuration: 5},
+    //     {title: 'Java Complex', monthDuration: 6},
+    //     {title: 'Python Complex', monthDuration: 6},
+    //     {title: 'QA Complex', monthDuration: 4},
+    //     {title: 'FullStack', monthDuration: 7},
+    //     {title: 'Frontend', monthDuration: 4}
+    // ];
+    // -- відсортувати його за спаданням за monthDuration
+    // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+
+
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
+    coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration)
+    console.log(coursesAndDurationArray)
+
+    let y = coursesAndDurationArray.filter(value => value.monthDuration > 5)
+    console.log(y)
 </script>
 </body>
 </html>
