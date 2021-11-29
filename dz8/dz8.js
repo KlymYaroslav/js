@@ -18,7 +18,7 @@ console.log(y)
 x.innerText = "Hi okten";
 y.innerText = "My name Yaroslav";
 
-x.style.color = "red";
+x.style.background = "red";
 y.style.color = "blue";
 
 y.children
