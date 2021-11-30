@@ -103,7 +103,7 @@ for (const lElement of l) {
 let m = document.getElementsByClassName('text2');
 console.log(m);
 for (const lElement of m) {
-    lElement.innerText = 'mon-year. Пример sep-2021';
+    lElement.innerText = 'mon-year.Пример sep-2021';
 }
 
 
