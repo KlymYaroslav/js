@@ -105,5 +105,5 @@ for (const arrayElement of coursesAndDurationArray2) {
     document.body.appendChild(div);
     div.appendChild(h1)
     div.appendChild(p)
-    div.style.marginBottom = "12px"
+    div.style.marginBottom = "10px"
 }
