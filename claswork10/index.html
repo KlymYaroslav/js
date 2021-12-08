@@ -12,38 +12,93 @@
     </style>
 </head>
 <body>
-<form name="xxx" id="5">
-    <input type="text" id="qq">
-    <input type="text" id="ww">
-</form>
-<form name="yyy" id="7">
-    <input type="text" id="ee">
-    <input type="text" id="rr">
-</form>
+<!--<form name="xxx" id="5">-->
+<!--    <input type="text" id="qq">-->
+<!--    <input type="text" id="ww">-->
+<!--</form>-->
+<!--<form name="yyy" id="7">-->
+<!--    <input type="text" id="ee">-->
+<!--    <input type="text" id="rr">-->
+<!--</form>-->
+
 <script>
   // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
   //         Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
   // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
-  let form1 = document.getElementById('5')
-  let form2 = document.getElementById('7')
+  // let form1 = document.getElementById('5')
+  // let form2 = document.getElementById('7')
+  //
+  // let input1 = document.getElementById('qq')
+  // let input2 = document.getElementById('ww')
+  // let input3 = document.getElementById('ee')
+  // let input4 = document.getElementById('rr')
+  // form1.append(input1,input2)
+  //
+  //
+  // form2.append(input3,input4)
+  // document.body.append(form1,form2)
+  // let button = document.createElement("button");
+  // document.body.appendChild(button)
+  // button.addEventListener('click', function (){
+  //     console.log(input1.value)
+  //     console.log(input2.value)
+  //     console.log(input3.value)
+  //     console.log(input4.value)
+  // })
 
-  let input1 = document.getElementById('qq')
-  let input2 = document.getElementById('ww')
-  let input3 = document.getElementById('ee')
-  let input4 = document.getElementById('rr')
-  form1.append(input1,input2)
+  //    - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+  //        При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+  // let input1 = document.createElement('input');
+  // let input2 = document.createElement('input');
+  // let input3 = document.createElement('input');
+  // let button = document.createElement('button');
+  //
+  // document.body.append(input1, input2, input3, button);
+  //
+  // button.addEventListener('click', function () {
+  //     let tr = input1.value;
+  //     let td = input2.value;
+  //     let text = input3.value;
+  //
+  //     function generationTable(tr, td, inner) {
+  //         let table = document.createElement('table');
+  //         let divTable = document.createElement('div');
+  //
+  //
+  //         divTable.appendChild(table);
+  //         document.body.appendChild(divTable);
+  //
+  //         for (let i = 0; i < tr; i++) {
+  //             let tr = document.createElement('tr');
+  //             tr.style.border = '1px solid blue';
+  //             for (let j = 0; j < td; j++) {
+  //                 let td = document.createElement('td');
+  //                 td.style.border = '1px solid green';
+  //                 td.text = `${inner}`;
+  //                 table.appendChild(tr);
+  //                 tr.appendChild(td);
+  //             }
+  //         }
+  //     }
+  //     generationTable(tr, td, text);
+  // })
 
+  //    - Сворити масив не цензцрних слів.
+  //        Сворити інпут текстового типу.
+  //        Якщо людина вводить слово і воно міститься в масиві не цензурних слів кинути алерт з попередженням.
+  //        Перевірку робити при натисканні на кнопку
 
-  form2.append(input3,input4)
-  document.body.append(form1,form2)
-  let button = document.createElement("button");
-  document.body.appendChild(button)
-  button.addEventListener('click', function (){
-     console.log(input1.value)
-     console.log(input2.value)
-     console.log(input3.value)
-     console.log(input4.value)
- })
+  // let array = ['бляха','капец','козел','дурак'];
+  // let button = document.createElement('button')
+  // let input = document.createElement('input')
+  // document.body.append(input,button)
+  // button.onclick = function () {
+  //     for (const elementarray of array) {
+  //         if (input.value === elementarray){
+  //             alert('Не говоріть поогані слова');
+  //         }
+  //     }
+  // }
 </script>
 </body>
 </html>
