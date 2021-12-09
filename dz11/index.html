@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            height: 10px;
+            width: 20px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<form id="1" name="x">
+    <input type="text" name="name" id="2">
+    <input type="text" name="age" id="3">
+</form>
+
+<form id="4" name="y">
+    <input type="text" name="model" id="5">
+    <input type="text" name="type" id="6">
+    <input type="text" name="volume" id="7">
+</form>
+
+<script>
+    // -створити форму з інпутами для name та age.
+    //     При відправці форми записати об'єкт в localstorage
+
+    let form = document.getElementById('1')
+    let name = document.getElementById('2')
+    let age = document.getElementById('3')
+    form.append(name,age)
+    document.body.appendChild(form)
+    let button = document.createElement("button");
+    document.body.appendChild(button)
+
+    button.addEventListener('click', function (){
+        localStorage.setItem('k1', JSON.stringify(name.value))
+        localStorage.setItem('k2', JSON.stringify(age.value))
+
+       console.log(name,age)
+    })
+
+
+    // -створити форму з інпутами для model,type та volume автівки.
+    //     при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+
+    let form2 = document.getElementById('4')
+    let model = document.getElementById('5')
+    let type = document.getElementById('6')
+    let volume = document.getElementById('7')
+    form2.append(model,type,volume)
+    document.body.appendChild(form2)
+    let array = { model,type,volume };
+
+    document.body.appendChild(button)
+    button.addEventListener('click', function (){
+        localStorage.setItem('k3', JSON.stringify(array))
+
+        console.log(model.value)
+        console.log(type.value)
+        console.log(volume.value)
+    })
+
+</script>
+</body>
+</html>
