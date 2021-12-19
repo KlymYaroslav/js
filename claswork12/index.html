@@ -33,9 +33,9 @@
                         .then(value => {
                                 let comentsdiv = document.createElement('div')
 
-                            for (const comentsdivElement of comentsdiv) {
+                            for (const valueElement of value) {
                                 let comment = document.createElement('div')
-                                comment.innerText = comentsdivElement.body
+                                comment.innerText = valueElement.body
                                 comentsdiv.appendChild(comment)
                             }
                                 divall.appendChild(comentsdiv)
